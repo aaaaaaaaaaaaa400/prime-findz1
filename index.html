@@ -1,0 +1,3389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--<< Header Area >>-->
+  <head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="cmshaper" />
+    <!-- ======== Page title ============ -->
+    <title>Prime Findz - Eco-Friendly Insulation Solutions</title>
+    <!--<< Favcion >>-->
+    <link rel="shortcut icon" href="assets/img/favicon.svg" />
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--<< All Min Css >>-->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <!--<< Color.css >>-->
+    <link rel="stylesheet" href="assets/css/color.css" />
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Mobile Animation Styles */
+      @media (max-width: 767px) {
+        /* Animated entrance for benefit cards */
+        .benefit-card {
+          transform: translateY(30px);
+          opacity: 0;
+          transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+        }
+        
+        .benefit-card.show {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        
+        /* Enhanced touch feedback */
+        .theme-btn, .service-icon, .benefit-card, .footer-content a, .list-items a {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* Floating animation for icons */
+        .service-icon, .benefit-icon {
+          animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0px); }
+        }
+        
+        /* Pulse animation for CTA buttons */
+        .hero-button .theme-btn {
+          animation: pulse-mobile 2s infinite;
+        }
+        
+        @keyframes pulse-mobile {
+          0% { box-shadow: 0 0 0 0 rgba(67, 195, 234, 0.6); }
+          70% { box-shadow: 0 0 0 15px rgba(67, 195, 234, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(67, 195, 234, 0); }
+        }
+        
+        /* Smooth scrolling for better mobile experience */
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+      
+      /* FAQ Illustration Styles */
+      .faq-illustration {
+        background-color: rgba(67, 195, 234, 0.05);
+        border-radius: 20px;
+        padding: 40px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .faq-illustration::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: rgba(67, 195, 234, 0.1);
+        border-radius: 50%;
+        top: -100px;
+        left: -100px;
+      }
+      
+      .faq-illustration::after {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: rgba(38, 132, 255, 0.1);
+        border-radius: 50%;
+        bottom: -50px;
+        right: -50px;
+      }
+      
+      .house-illustration {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+      
+      .house-icon {
+        font-size: 120px;
+        color: #43c3ea;
+        margin-bottom: 30px;
+        animation: float-icon 3s ease-in-out infinite;
+      }
+      
+      @keyframes float-icon {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      .insulation-benefits {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+      
+      .insulation-benefits h3 {
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      
+      .insulation-benefits p {
+        color: #666;
+      }
+      
+      .benefit-icon-row {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      
+      .benefit-icon {
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      }
+      
+      .benefit-icon i {
+        font-size: 24px;
+        color: #43c3ea;
+      }
+      
+      .faq-accordion .accordion-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .faq-accordion .accordion-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .accordion-button {
+        transition: background-color 0.3s ease;
+      }
+      
+      .accordion-button:not(.collapsed) {
+        background: linear-gradient(90deg, rgba(67, 195, 234, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+      
+      .accordion-button span {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+      
+      .accordion-button:hover span {
+        transform: translateX(3px);
+        color: #43c3ea;
+      }
+      
+      /* Enhanced Counter Section Styles */
+      .counter-items {
+        position: relative;
+        overflow: hidden;
+        padding: 35px 20px;
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        transition: all 0.4s ease;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 5px;
+      }
+      
+      .counter-section .row {
+        margin: 0 -5px;
+      }
+      
+      .counter-section .col-xl {
+        padding: 0 5px;
+      }
+      
+      .counter-items::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: #43c3ea;
+        transition: all 0.4s ease;
+      }
+      
+      .counter-items:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(67, 195, 234, 0.15);
+      }
+      
+      .counter-items:hover::before {
+        width: 100%;
+        opacity: 0.03;
+      }
+      
+      .counter-items .icon {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 15px;
+        transition: all 0.4s ease;
+      }
+      
+      .counter-items:hover .icon i {
+        animation: pulse-count 1.5s infinite;
+        color: #43c3ea;
+      }
+      
+      .counter-items .content {
+        position: relative;
+        z-index: 2;
+      }
+      
+      .counter-items .content h2 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        background: linear-gradient(90deg, #43c3ea 0%, #2684ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .counter-items .content h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+      }
+      
+      @keyframes pulse-count {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+      
+      @keyframes rotate-tools {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(15deg); }
+        50% { transform: rotate(0deg); }
+        75% { transform: rotate(-15deg); }
+        100% { transform: rotate(0deg); }
+      }
+      
+      /* Modern Offcanvas Styles */
+      .modern-sidebar {
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 400px;
+        transition: all 0.3s ease;
+      }
+      
+      .offcanvas__overlay.active {
+        backdrop-filter: blur(5px);
+      }
+      
+      .logo-animation {
+        display: inline-block;
+        animation: float-subtle 3s ease-in-out infinite;
+      }
+      
+      .close-btn {
+        background-color: #23c56d;
+        border: none;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(35, 197, 109, 0.3);
+      }
+      
+      .close-btn:hover {
+        background-color: #1ca554;
+        transform: rotate(90deg);
+        box-shadow: 0 4px 15px rgba(35, 197, 109, 0.4);
+      }
+      
+      .pulse-effect {
+        transition: all 0.3s ease;
+      }
+      
+      .pulse-effect:hover {
+        animation: pulse 1s infinite;
+      }
+      
+      .sidebar-subtitle {
+        font-size: 14px;
+        color: #6c757d;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      .sidebar-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #23c56d;
+        margin-bottom: 10px;
+      }
+      
+      .sidebar-separator {
+        height: 3px;
+        width: 50px;
+        background: linear-gradient(90deg, #23c56d, #17a2b8);
+        margin-bottom: 15px;
+        border-radius: 2px;
+      }
+      
+      /* New nav-menu-list styles */
+      .nav-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+      }
+      
+      .nav-menu-list li {
+        margin-bottom: 10px;
+      }
+      
+      .nav-menu-list li a {
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        display: block;
+        padding: 8px 0;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+      }
+      
+      .nav-menu-list li a:hover {
+        color: #23c56d;
+        padding-left: 5px;
+      }
+      
+      .contact-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+      
+      .contact-title-icon {
+        color: #23c56d;
+        margin-right: 10px;
+      }
+      
+      .contact-list {
+        padding: 0;
+        list-style: none;
+      }
+      
+      .contact-item {
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+      }
+      
+      .contact-item:hover {
+        transform: translateX(5px);
+      }
+      
+      .contact-icon-wrapper {
+        width: 35px;
+        height: 35px;
+        background-color: rgba(35, 197, 109, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        color: #23c56d;
+        transition: all 0.3s ease;
+      }
+      
+      .contact-item:hover .contact-icon-wrapper {
+        background-color: #23c56d;
+        color: white;
+      }
+      
+      .cta-container {
+        margin-top: 30px;
+      }
+      
+      .sidebar-cta {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90deg, #23c56d, #17a2b8);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(35, 197, 109, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .sidebar-cta:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: 0.5s;
+      }
+      
+      .sidebar-cta:hover:before {
+        left: 100%;
+      }
+      
+      .sidebar-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(35, 197, 109, 0.3);
+        color: white;
+        text-decoration: none;
+      }
+      
+      .cta-icon-wrap {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+      
+      .cta-text {
+        flex-grow: 1;
+      }
+      
+      .cta-arrow {
+        margin-left: 10px;
+        transition: transform 0.3s ease;
+      }
+      
+      .sidebar-cta:hover .cta-arrow {
+        transform: translateX(5px);
+      }
+      
+      .social-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      
+      .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      
+      .social-icon-item {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        transform: translateY(0);
+      }
+      
+      .social-icon-item:hover {
+        transform: translateY(-5px);
+        color: white;
+        text-decoration: none;
+      }
+      
+      .social-icon-item.facebook {
+        background-color: #3b5998;
+      }
+      
+      .social-icon-item.twitter {
+        background-color: #1da1f2;
+      }
+      
+      .social-icon-item.youtube {
+        background-color: #ff0000;
+      }
+      
+      .social-icon-item.linkedin {
+        background-color: #0077b5;
+      }
+      
+      /* Animation Classes */
+      .fade-in-element {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      
+      .zoom-in-element {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      
+      @keyframes fade-in-up {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes zoom-in {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      
+      @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(0deg); }
+      }
+      
+      @keyframes completion-pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.7);
+        }
+        
+        50% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 10px rgba(0, 128, 0, 0);
+        }
+        
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(0, 128, 0, 0);
+        }
+      }
+      
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.3);
+        }
+        
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+        }
+        
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+        }
+      }
+      
+      /* Logo Animation */
+      @keyframes float-subtle {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      
+      /* Enhanced Animations */
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slide-right {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes scale-in {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      
+      /* Animated Hamburger Icon */
+      .animated-icon {
+        position: relative;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+      
+      .animated-icon img {
+        transition: all 0.4s ease;
+      }
+      
+      .animated-icon::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(67, 195, 234, 0.1);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 0.3s ease;
+      }
+      
+      .animated-icon:hover::before {
+        transform: scale(1.5);
+      }
+      
+      .animated-icon:hover img {
+        transform: rotate(90deg);
+      }
+      
+      /* Mobile-only styles */
+      @media (max-width: 767px) {
+        /* Mobile navigation styles */
+        /* Removed mobile breadcrumb styles */
+        
+        /* Scroll progress indicator */
+        .scroll-progress {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 0%;
+          height: 3px;
+          background: linear-gradient(to right, #43c3ea, #2684ff);
+          z-index: 9999;
+          transition: width 0.2s ease;
+        }
+        
+        /* Removed mobile-nav-indicator styles */
+        
+        /* Enhance mobile animations */
+        .header-top-section {
+          display: none; /* Simplify mobile header */
+        }
+        
+        /* Hide on desktop */
+        .desktop-hide {
+          display: none !important;
+        }
+        
+        /* Show only on mobile */
+        .mobile-only {
+          display: block !important;
+        }
+      }
+      
+      /* Animate sections as they come into view */
+      .animate-on-scroll {
+        opacity: 0;
+        transition: all 0.6s ease;
+      }
+      
+      .animate-on-scroll.slide-up {
+        transform: translateY(30px);
+      }
+      
+      .animate-on-scroll.slide-right {
+        transform: translateX(-30px);
+      }
+      
+      .animate-on-scroll.scale-in {
+        transform: scale(0.9);
+      }
+      
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translate(0) scale(1);
+      }
+      
+      /* Preloader */
+      /* ... existing code ... */
+      
+      /* Interactive Navigation Menu Styles */
+      .interactive-nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+      }
+      
+      .interactive-nav-menu .nav-item {
+        margin-bottom: 12px;
+      }
+      
+      .interactive-nav-menu .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        color: #333;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .interactive-nav-menu .nav-link:hover,
+      .interactive-nav-menu .nav-link:focus {
+        background-color: #23c56d;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(35, 197, 109, 0.15);
+      }
+      
+      .interactive-nav-menu .icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: rgba(35, 197, 109, 0.1);
+        border-radius: 50%;
+        margin-right: 12px;
+        transition: all 0.3s ease;
+      }
+      
+      .interactive-nav-menu .nav-link:hover .icon-wrapper {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      
+      .interactive-nav-menu .nav-link i {
+        color: #23c56d;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+      
+      .interactive-nav-menu .nav-link:hover i {
+        color: white;
+      }
+      
+      .interactive-nav-menu .nav-link span {
+        flex-grow: 1;
+        font-weight: 500;
+        font-size: 15px;
+      }
+      
+      .interactive-nav-menu .arrow-icon {
+        margin-left: 10px;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: all 0.3s ease;
+      }
+      
+      .interactive-nav-menu .nav-link:hover .arrow-icon {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      
+      /* Contact Icon Wrapper */
+      .contact-icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      
+      .contact-item:hover .contact-icon-wrapper {
+        transform: scale(1.1);
+        background-color: rgba(35, 197, 109, 0.15) !important;
+      }
+      
+      .contact-item {
+        transition: all 0.3s ease;
+      }
+      
+      .contact-item:hover {
+        transform: translateX(5px);
+      }
+      
+      /* New Styles for the Offcanvas Contact Section */
+      .contact-list {
+        padding: 0;
+        list-style: none;
+      }
+      
+      /* Close Button */
+      /* ... existing code ... */
+      
+      .whatsapp-btn {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .whatsapp-icon {
+        background-color: #25D366;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        margin-right: 12px;
+      }
+      
+      .whatsapp-text {
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      
+      .whatsapp-btn:hover .whatsapp-icon {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+      }
+      
+      .whatsapp-btn:hover .whatsapp-text {
+        color: #25D366;
+        transform: translateX(3px);
+      }
+      
+      /* Enhanced animation for service cards */
+      .our-services-section .row {
+        perspective: 1000px;
+      }
+      
+      .our-services-section .col-lg-4 {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      
+      .our-services-section .col-lg-4.wow.fadeInUp.animated {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Add smooth entrance effect for service cards on mobile */
+      @media (max-width: 767px) {
+        .service-card {
+          transform: translateY(20px);
+          opacity: 0;
+          transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+        }
+        
+        .service-card.show {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        
+        .service-card {
+          padding: 25px 20px;
+        }
+        
+        .service-icon-wrap {
+          height: 70px;
+        }
+        
+        .service-card-icon {
+          width: 70px;
+          height: 70px;
+          line-height: 70px;
+          text-align: center;
+          border-radius: 50%;
+          background: rgba(67, 195, 234, 0.1);
+          font-size: 30px;
+          margin-bottom: 25px;
+          color: #43c3ea;
+          display: inline-block;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          will-change: transform;
+        }
+        
+        .service-card:hover .service-card-icon {
+          background: #43c3ea;
+          color: #fff;
+          transform: scale(1.1);
+        }
+        
+        /* Ensure service icons remain visible on small screens */
+        @media (max-width: 768px) {
+          .service-card {
+            padding: 25px 20px;
+          }
+          
+          .service-card-icon {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+          
+          .service-card h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+        }
+        
+        .service-content h3 {
+          font-size: 20px;
+        }
+        
+        .service-content p {
+          font-size: 15px;
+        }
+      }
+    </style>
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Preloader area start -->
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+      <div class="animation-preloader">
+        <div class="spinner"></div>
+        <div class="txt-loading">
+          <span data-text-preloader="P" class="letters-loading"> P </span>
+          <span data-text-preloader="R" class="letters-loading"> R </span>
+          <span data-text-preloader="I" class="letters-loading"> I </span>
+          <span data-text-preloader="M" class="letters-loading"> M </span>
+          <span data-text-preloader="E" class="letters-loading"> E </span>
+        </div>
+        <p class="text-center">Loading</p>
+      </div>
+      <div class="loader">
+        <div class="row">
+          <div class="col-3 loader-section section-left">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-left">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-right">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-right">
+            <div class="bg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Back To Top Start -->
+    <!-- Back To Top Start -->
+    <button id="back-top" class="back-to-top">
+      <i class="fa-regular fa-arrow-up"></i>
+    </button>
+    <!--<< Mouse Cursor Start >>-->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+      <div class="offcanvas__info modern-sidebar">
+        <div class="offcanvas__wrapper">
+          <div class="offcanvas__content">
+            <div
+              class="offcanvas__top mb-4 d-flex justify-content-between align-items-center"
+            >
+              <div class="offcanvas__logo">
+                <a href="index.html" class="logo-animation">
+                  <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                </a>
+              </div>
+              <div class="offcanvas__close">
+                <button class="close-btn">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Interactive Navigation Menu - Replaces the Welcome section -->
+            <ul class="interactive-nav-menu">
+              <li class="nav-item">
+                <a href="#" data-scroll-to="hero-section" class="nav-link">
+                  <div class="icon-wrapper">
+                    <i class="fa-solid fa-house-chimney"></i>
+                  </div>
+                  <span>Home</span>
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" data-scroll-to="about" class="nav-link">
+                  <div class="icon-wrapper">
+                    <i class="fa-solid fa-info-circle"></i>
+                  </div>
+                  <span>About Us</span>
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" data-scroll-to="service" class="nav-link">
+                  <div class="icon-wrapper">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <span>Benefits</span>
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" data-scroll-to="our-services-section" class="nav-link">
+                  <div class="icon-wrapper">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <span>Our Services</span>
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </a>
+              </li>
+            </ul>
+            
+            <div class="offcanvas__contact" style="margin-top: 30px;">
+              <h4 class="contact-title" style="font-weight: 600; color: #333; border-bottom: none; font-size: 18px; margin-bottom: 15px;"><i class="fa-solid fa-address-card contact-title-icon" style="color: #23c56d;"></i> Contact Us</h4>
+              <ul class="contact-list">
+                <li class="contact-item d-flex align-items-center" style="margin-bottom: 10px;">
+                  <div class="contact-icon-wrapper" style="background-color: rgba(35, 197, 109, 0.08); width: 35px; height: 35px; margin-right: 12px;">
+                    <i class="fa-solid fa-location-dot" style="color: #23c56d;"></i>
+                  </div>
+                  <div class="offcanvas__contact-text">
+                    <a target="_blank" href="#" style="color: #555; font-size: 15px;">
+                      Main Street, United Kingdom</a>
+                  </div>
+                </li>
+                <li class="contact-item d-flex align-items-center" style="margin-bottom: 10px;">
+                  <div class="contact-icon-wrapper" style="background-color: rgba(35, 197, 109, 0.08); width: 35px; height: 35px; margin-right: 12px;">
+                    <i class="fa-solid fa-envelope" style="color: #23c56d;"></i>
+                  </div>
+                  <div class="offcanvas__contact-text">
+                    <a href="mailto:primefindzltd@gmail.com" style="color: #555; font-size: 15px;">
+                      <span>primefindzltd@gmail.com</span></a>
+                  </div>
+                </li>
+                <li class="contact-item d-flex align-items-center" style="margin-bottom: 10px;">
+                  <div class="contact-icon-wrapper" style="background-color: rgba(35, 197, 109, 0.08); width: 35px; height: 35px; margin-right: 12px;">
+                    <i class="fa-solid fa-clock" style="color: #23c56d;"></i>
+                  </div>
+                  <div class="offcanvas__contact-text">
+                    <a target="_blank" href="#" style="color: #555; font-size: 15px;">Mon-Friday, 09am - 05pm</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+    <!-- Header Section Start -->
+    <header class="header-section-2">
+      <div id="header-sticky" class="header-1">
+        <div class="main-logo">
+          <a href="index.html">
+            <img src="assets/img/logo/black-logo.svg" alt="logo-image" />
+          </a>
+        </div>
+        <div class="container-fluid">
+          <div class="mega-menu-wrapper">
+            <div class="header-main">
+              <div class="logo d-none">
+                <a href="index.html" class="header-logo">
+                  <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                </a>
+              </div>
+              <!-- Desktop Navigation - Centered -->
+              <div class="header-center d-none d-md-flex justify-content-center w-100">
+                <div class="mean__menu-wrapper">
+                  <div class="main-menu">
+                    <nav id="desktop-menu">
+                      <ul class="d-flex justify-content-center">
+                        <li>
+                          <a href="#" data-scroll-to="hero-section">Home</a>
+                        </li>
+                        <li>
+                          <a href="#" data-scroll-to="about">About Us</a>
+                        </li>
+                        <li>
+                          <a href="#" data-scroll-to="service">Benefits</a>
+                        </li>
+                        <li>
+                          <a href="#" data-scroll-to="our-services-section">Our Services</a>
+                        </li>
+                        <li>
+                          <a href="https://wa.me/447538038430" target="_blank" rel="noopener noreferrer">Contact Us</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Mobile Navigation -->
+              <div class="header-left d-md-none">
+                <div class="mean__menu-wrapper">
+                  <div class="main-menu">
+                    <nav id="mobile-menu">
+                      <ul>
+                        <li>
+                          <a href="#" data-scroll-to="hero-section">Home</a>
+                        </li>
+                        <li>
+                          <a href="#" data-scroll-to="about">About Us</a>
+                        </li>
+                        <li>
+                          <a href="#" data-scroll-to="service">Benefits</a>
+                        </li>
+                        <li>
+                          <a href="#" data-scroll-to="our-services-section">Our Services</a>
+                        </li>
+                        <li>
+                          <a href="https://wa.me/447538038430" target="_blank" rel="noopener noreferrer">Contact Us</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="header-right d-flex justify-content-end align-items-center"
+              >
+                <div class="header__hamburger d-xl-block my-auto">
+                  <div class="sidebar__toggle animated-icon">
+                    <img src="assets/img/logo/bar.png" alt="img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Scroll Progress Indicator - Mobile Only -->
+    <div class="scroll-progress d-md-none"></div>
+    
+    <!-- Search Area Start -->
+    <div class="search-wrap">
+      <div class="search-inner">
+        <i class="fas fa-times search-close" id="search-close"></i>
+        <div class="search-cell">
+          <form method="get">
+            <div class="search-field-holder">
+              <input
+                type="search"
+                class="main-search-input"
+                placeholder="Search..."
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section Start -->
+    <section class="hero-section fix hero-1 position-relative">
+      <video
+        class="position-absolute h-100 w-100 start-0 top-0 object-fit-cover z-n1"
+        autoplay
+        loop
+        muted
+      >
+        <source src="assets/videos/hero-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-shape">
+        <img src="assets/img/hero/shape-img.png" alt="img" />
+      </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="hero-content">
+              <h3 class="wow fadeInUp">Transform Your Home's Efficiency</h3>
+              <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                Sustainable Insulation Solutions
+              </h1>
+              <p class="wow fadeInUp" data-wow-delay=".5s">
+                Reduce energy bills, enhance comfort, and increase property value with our premium eco-friendly insulation services. Government grants available.
+              </p>
+              <div class="hero-button wow fadeInUp" data-wow-delay=".7s">
+                <a href="https://wa.me/447538038430" class="theme-btn"
+                  >Contact Us Today <i class="fa-regular fa-angles-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about-section fix section-padding">
+      <div class="about-shape">
+        <img src="assets/img/about/about-shape.png" alt="shape-img" />
+      </div>
+      <div class="container">
+        <div class="about-wrapper">
+          <div class="about-bg-shape">
+            <img src="assets/img/about/about-bg-shape.png" alt="img" />
+          </div>
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+              <div class="about-image">
+                <style>
+                  .service-circle-animation {
+                    position: relative;
+                    width: 100%;
+                    height: 400px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                  .circle-container {
+                    position: relative;
+                    width: 360px;
+                    height: 360px;
+                    border-radius: 50%;
+                    background-color: rgba(0, 0, 0, 0.03);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                  .service-icon {
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                    animation: rotateAround 20s linear infinite;
+                    z-index: 1;
+                  }
+                  .service-icon i {
+                    font-size: 30px;
+                    color: #43c3ea;
+                  }
+                  .service-icon:nth-child(1) { animation-delay: 0s; }
+                  .service-icon:nth-child(2) { animation-delay: -3.33s; }
+                  .service-icon:nth-child(3) { animation-delay: -6.66s; }
+                  .service-icon:nth-child(4) { animation-delay: -10s; }
+                  .service-icon:nth-child(5) { animation-delay: -13.33s; }
+                  .service-icon:nth-child(6) { animation-delay: -16.66s; }
+                  
+                  .circle-center {
+                    width: 120px;
+                    height: 120px;
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 2;
+                  }
+                  .circle-center img {
+                    width: 80px;
+                    height: auto;
+                  }
+                  
+                  @keyframes rotateAround {
+                    0% {
+                      transform: rotate(0deg) translateX(160px) rotate(0deg);
+                    }
+                    100% {
+                      transform: rotate(360deg) translateX(160px) rotate(-360deg);
+                    }
+                  }
+                </style>
+                
+                <div class="service-circle-animation">
+                  <div class="circle-container">
+                    <div class="circle-center">
+                      <img src="assets/img/logo/black-logo.svg" alt="Prime Findz">
+                    </div>
+                    <div class="service-icon">
+                      <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <div class="service-icon">
+                      <i class="fa-solid fa-temperature-low"></i>
+                    </div>
+                    <div class="service-icon">
+                      <i class="fa-solid fa-piggy-bank"></i>
+                    </div>
+                    <div class="service-icon">
+                      <i class="fa-solid fa-shield-alt"></i>
+                    </div>
+                    <div class="service-icon">
+                      <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div class="service-icon">
+                      <i class="fa-solid fa-recycle"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="about-content">
+                <div class="section-title">
+                  <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                    Eco-Friendly Insulation Experts You Can Trust
+                  </h2>
+                </div>
+                <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
+                  At Prime Findz Ltd, we're dedicated to creating energy-efficient, sustainable homes using cutting-edge insulation technology. Our eco-friendly solutions not only reduce your carbon footprint but also significantly cut your energy bills while qualifying for government grants. With expertise in both commercial and residential projects, we deliver superior results that last.
+                </p>
+                <ul class="about-list wow fadeInUp" data-wow-delay=".3s">
+                  <li>
+                    <i class="fa-solid fa-leaf"></i>
+                    Eco-Friendly Materials – We use sustainable, high-performance insulation materials that minimize environmental impact while maximizing energy efficiency.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-piggy-bank"></i>
+                    Energy Cost Savings – Our insulation solutions can reduce heating bills by up to 45%, providing substantial long-term savings for homeowners.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    Government Grant Assistance – We help homeowners navigate and qualify for available insulation grants and subsidies to make upgrades more affordable.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-temperature-low"></i>
+                    Temperature Regulation – Enjoy consistent temperatures year-round with our comprehensive insulation systems for walls, roofs, and floors.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-shield-check"></i>
+                    Condensation & Mould Prevention – Our solutions effectively address the root causes of damp and mould, creating healthier living environments.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-certificate"></i>
+                    Certified Installation – All work is carried out by fully trained professionals in accordance with industry standards and regulations.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Section Start -->
+    <div class="marquee-section">
+      <div class="mycustom-marque">
+        <div class="scrolling-wrap">
+          <div class="comm">
+            <div class="cmn-textslide text-custom-storke">ECO-FRIENDLY</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide">ENERGY SAVING</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide text-custom-storke">EXCELLENCE</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide">SUSTAINABLE</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide text-custom-storke">QUALITY</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+          </div>
+          <div class="comm">
+            <div class="cmn-textslide text-custom-storke">ECO-FRIENDLY</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide">ENERGY SAVING</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide text-custom-storke">EXCELLENCE</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide">SUSTAINABLE</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide text-custom-storke">QUALITY</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+          </div>
+          <div class="comm">
+            <div class="cmn-textslide text-custom-storke">ECO-FRIENDLY</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide">ENERGY SAVING</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide text-custom-storke">EXCELLENCE</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide">SUSTAINABLE</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+            <div class="cmn-textslide text-custom-storke">QUALITY</div>
+            <div><img src="assets/img/marquee-box.png" alt="img" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Section Start -->
+    <section id="service" class="service-section fix section-padding">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2 class="fs-1 wow fadeInUp" data-wow-delay=".3s">
+            Why Homeowners Trust Our Services
+          </h2>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div class="benefit-content">
+                <h3>Save Up to 40% on Energy Bills</h3>
+                <p>Reduce heat loss and cut down your energy costs with our top-tier insulation solutions.</p>
+              </div>
+              <div class="benefit-hover-effect"></div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div class="benefit-content">
+                <h3>Eco-Friendly Materials</h3>
+                <p>We use sustainable and high-quality materials that are safe for your home and the environment.</p>
+              </div>
+              <div class="benefit-hover-effect"></div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+              </div>
+              <div class="benefit-content">
+                <h3>Grants & Funding Available</h3>
+                <p>Take advantage of government grants and energy-saving incentives to lower installation costs.</p>
+              </div>
+              <div class="benefit-hover-effect"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <style>
+        .service-section {
+          position: relative;
+          overflow: hidden;
+          background-color: #f9f9f9;
+        }
+        
+        .benefit-card {
+          position: relative;
+          background: #fff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          height: 100%;
+          transition: all 0.4s ease;
+          overflow: hidden;
+          z-index: 1;
+        }
+        
+        .benefit-card:hover {
+          transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(67, 195, 234, 0.1);
+          border-radius: 50%;
+          position: relative;
+          z-index: 2;
+        }
+        
+        .benefit-icon i {
+          font-size: 36px;
+          color: #43c3ea;
+        }
+        
+        .benefit-content {
+          position: relative;
+          z-index: 2;
+        }
+        
+        .benefit-content h3 {
+          font-size: 22px;
+          margin-bottom: 15px;
+          font-weight: 600;
+          color: #333;
+        }
+        
+        .benefit-content p {
+          font-size: 16px;
+          color: #666;
+          line-height: 1.6;
+        }
+        
+        .benefit-hover-effect {
+          position: absolute;
+          bottom: -100%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, rgba(67, 195, 234, 0.9) 0%, rgba(38, 132, 255, 0.9) 100%);
+          transition: all 0.5s ease;
+          z-index: 1;
+          opacity: 0;
+        }
+        
+        .benefit-card:hover .benefit-hover-effect {
+          bottom: 0;
+          opacity: 0.1;
+        }
+        
+        .benefit-card:hover .benefit-icon {
+          background: rgba(67, 195, 234, 0.2);
+        }
+        
+        .benefit-card:hover .benefit-icon i {
+          animation: pulse 1.5s infinite;
+        }
+        
+        .benefit-card:hover .benefit-content {
+          color: white;
+        }
+      </style>
+
+      <div class="nexava-shape">
+        <img src="assets/img/Nexava.png" alt="Nexava Shape" />
+      </div>
+    </section>
+  <!-- Service Section End -->
+  
+  <!-- Our Services Section Start -->
+  <section id="our-services-section" class="our-services-section fix section-padding" style="padding-top: 40px; background: linear-gradient(to bottom, #f9f9f9, #ffffff); overflow-x: hidden;">
+    <div class="container" style="overflow: hidden;">
+      <div class="section-title text-center mb-5">
+        <h2 class="fs-1 wow fadeInUp" data-wow-delay=".3s">
+          Our Professional Services
+        </h2>
+        <p class="mt-3 wow fadeInUp" data-wow-delay=".5s" style="max-width: 700px; margin: 0 auto;">
+          We provide a comprehensive range of eco-friendly solutions for your home or business, from energy-efficient insulation to premium flooring and essential maintenance services.
+        </p>
+      </div>
+      
+      <div class="row g-4 justify-content-center">
+        <!-- Service Card 1: Wall Insulation -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card h-100">
+            <div class="service-card-icon">
+              <i class="fas fa-temperature-low"></i>
+            </div>
+            <h4 class="mt-4 mb-3">External & Internal Wall Insulation</h4>
+            <p>Transform your home with premium insulation solutions that reduce energy bills and increase comfort.</p>
+            <div class="service-features mt-4">
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Reduced energy bills</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Improved comfort</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Government grants available</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service Card 2 Start -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card h-100">
+            <div class="service-card-icon">
+              <i class="fas fa-paint-roller"></i>
+            </div>
+            <h4 class="mt-4 mb-3">Silicone & Brick Effect Rendering</h4>
+            <p>Enhance your property's curb appeal with our premium rendering solutions that protect and beautify.</p>
+            <div class="service-features mt-4">
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Weather resistant finish</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Aesthetic enhancement</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Low maintenance solution</div>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 2 End -->
+        
+        <!-- Service Card 3 Start -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card h-100">
+            <div class="service-card-icon">
+              <i class="fas fa-faucet"></i>
+            </div>
+            <h4 class="mt-4 mb-3">Plumbing</h4>
+            <p>Professional plumbing services for all your residential and commercial needs, with prompt and reliable solutions.</p>
+            <div class="service-features mt-4">
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Emergency repairs</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>New installations</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Maintenance services</div>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 3 End -->
+        
+        <!-- Service Card 4 Start -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card h-100">
+            <div class="service-card-icon">
+              <i class="fas fa-house-chimney"></i>
+            </div>
+            <h4 class="mt-4 mb-3">Roof & Guttering</h4>
+            <p>Keep your property protected from the elements with our comprehensive roofing and guttering solutions.</p>
+            <div class="service-features mt-4">
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Leak prevention</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Weather protection</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Gutter cleaning & repair</div>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 4 End -->
+        
+        <!-- Service Card 5 Start -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card h-100">
+            <div class="service-card-icon">
+              <i class="fa-solid fa-border-all"></i>
+            </div>
+            <h4 class="mt-4 mb-3">Carpet & Flooring</h4>
+            <p>Transform your space with our premium flooring solutions, from luxurious carpets to durable hard flooring options.</p>
+            <div class="service-features mt-4">
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Premium materials</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Professional installation</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Comprehensive warranties</div>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 5 End -->
+        
+        <!-- Service Card 6 Start -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card h-100">
+            <div class="service-card-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h4 class="mt-4 mb-3">Electrical Services</h4>
+            <p>Reliable electrical solutions for residential and commercial properties, ensuring safety and efficiency.</p>
+            <div class="service-features mt-4">
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Safety inspections</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Rewiring services</div>
+              <div class="feature-item"><i class="fas fa-check text-success me-2"></i>Energy-efficient upgrades</div>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 6 End -->
+      </div>
+      
+      <!-- CTA Button -->
+      <div class="text-center mt-5 wow fadeInUp" data-wow-delay=".8s">
+        <a href="https://wa.me/447538038430" class="theme-btn">
+          Discuss Your Project <i class="fa-regular fa-angles-right"></i>
+        </a>
+      </div>
+    </div>
+    
+    <style>
+      /* Services Section Styles */
+      .our-services-section {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .service-card {
+        position: relative;
+        background: white;
+        border-radius: 15px;
+        padding: 30px 25px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.35s ease-in-out;
+        overflow: hidden;
+        height: 100%;
+        transform: translateZ(0); /* Force GPU acceleration */
+        will-change: transform; /* Hint to browser for optimization */
+      }
+      
+      .service-card:hover {
+        transform: translateY(-7px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      @keyframes pulse-service {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.03);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+      .service-icon-wrap {
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 80px;
+        overflow: visible;
+      }
+      
+      .service-icon-bg {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: rgba(67, 195, 234, 0.08);
+        border-radius: 50%;
+        z-index: 1;
+        transition: all 0.4s ease;
+        left: 5px;
+        top: 5px;
+      }
+      
+      .service-card-icon {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        border-radius: 50%;
+        background: rgba(67, 195, 234, 0.1);
+        font-size: 30px;
+        margin-bottom: 25px;
+        color: #43c3ea;
+        display: inline-block;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        will-change: transform;
+      }
+      
+      .service-card:hover .service-card-icon {
+        background: #43c3ea;
+        color: #fff;
+        transform: scale(1.1);
+      }
+      
+      /* Ensure service icons remain visible on small screens */
+      @media (max-width: 768px) {
+        .service-card {
+          padding: 25px 20px;
+        }
+        
+        .service-card-icon {
+          width: 60px;
+          height: 60px;
+          line-height: 60px;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        
+        .service-card h4 {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+      }
+      
+      .service-content {
+        flex: 1;
+        position: relative;
+        z-index: 2;
+      }
+      
+      .service-content h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: #333;
+        transition: all 0.3s ease;
+      }
+      
+      .service-content p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+      }
+      
+      .service-features {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .service-features span {
+        font-size: 14px;
+        color: #555;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      }
+      
+      .service-features span i {
+        color: #23c56d;
+        font-size: 14px;
+      }
+      
+      .service-hover-effect {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(67, 195, 234, 0.97) 0%, rgba(38, 132, 255, 0.97) 100%);
+        transition: all 0.5s ease;
+        z-index: 1;
+        opacity: 0;
+      }
+      
+      .service-card:hover .service-hover-effect {
+        bottom: 0;
+        opacity: 0.03;
+      }
+      
+      .service-card:hover .service-card-icon {
+        background: rgba(67, 195, 234, 0.2);
+        transform: scale(1.05);
+      }
+      
+      .service-card:hover .service-icon-bg {
+        transform: scale(1.3);
+        opacity: 0.3;
+      }
+      
+      .service-card:hover .service-card-icon i {
+        animation: pulse-service 1.5s infinite;
+        color: #2684ff;
+      }
+      
+      .service-card:hover .service-content h3 {
+        color: #2684ff;
+      }
+      
+      @keyframes pulse-service {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      
+      @media (max-width: 767px) {
+        .service-card {
+          padding: 25px 20px;
+        }
+        
+        .service-content h3 {
+          font-size: 20px;
+        }
+        
+        .service-content p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </section>
+  <!-- Our Services Section End -->
+  
+  <!-- Work Process Section Start -->
+  <section class="work-process-section fix section-bg py-5">
+    <div class="shape-image">
+      <img src="assets/img/work-process-shape.png" alt="img" />
+    </div>
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="wow fadeInUp justify-content-center">
+          <img src="assets/img/icon/07.svg" alt="img" />Work Process
+        </span>
+        <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+          How It Works
+        </h2>
+      </div>
+      <div class="work-process-wrapper">
+        <div class="line-shape">
+          <img src="assets/img/line-shape.png" alt="shape-img" />
+        </div>
+        <div class="work-process-items wow fadeInUp" data-wow-delay=".3s">
+          <div class="icon">
+            <i class="fa-solid fa-comments" style="font-size: 32px; color: #fff;"></i>
+            <div class="number">1</div>
+          </div>
+          <div class="content">
+            <h3>Consultation</h3>
+            <p>
+              We begin by understanding your property's needs, discussing your goals, and assessing the current condition to tailor our services effectively.
+            </p>
+          </div>
+        </div>
+        <div class="work-process-items wow fadeInUp" data-wow-delay=".5s">
+          <div class="icon">
+            <i class="fa-solid fa-clipboard-check" style="font-size: 32px; color: #fff;"></i>
+            <div class="number">2</div>
+          </div>
+          <div class="content">
+            <h3>Planning</h3>
+            <p>
+              Our team develops a customized plan, detailing the scope of work, materials to be used, and a timeline to ensure transparency and efficiency.
+            </p>
+          </div>
+        </div>
+        <div class="work-process-items wow fadeInUp" data-wow-delay=".7s">
+          <div class="icon">
+            <i class="fa-solid fa-screwdriver-wrench" style="font-size: 32px; color: #fff; animation: rotate-tools 3s ease-in-out infinite;"></i>
+            <div class="number">3</div>
+          </div>
+          <div class="content">
+            <h3>Implementation</h3>
+            <p>
+              We execute the plan with precision, utilizing high-quality materials and skilled craftsmanship to enhance your property's value and efficiency.
+            </p>
+          </div>
+        </div>
+        <div class="work-process-items wow fadeInUp" data-wow-delay=".9s">
+          <div class="icon">
+            <i class="fa-solid fa-leaf" style="font-size: 32px; color: #fff;"></i>
+            <div class="number">4</div>
+          </div>
+          <div class="content">
+            <h3>Enjoy the Benefits</h3>
+            <p>
+              Experience improved energy efficiency, reduced bills, and a more comfortable home environment while contributing to a sustainable future.
+            </p>
+          </div>
+        </div>
+        <div class="work-process-items wow fadeInUp" data-wow-delay="1.1s">
+          <div class="icon">
+            <i class="fa-solid fa-headset" style="font-size: 32px; color: #fff;"></i>
+            <div class="number">5</div>
+          </div>
+          <div class="content">
+            <h3>Ongoing Support</h3>
+            <p>
+              We provide exceptional aftercare service, warranty on all installations, and are always available to address any questions or concerns you may have.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Work Process Section End -->
+  
+  <!-- Add spacing between sections -->
+  <div class="section-spacing" style="padding: 40px 0;"></div>
+
+    <!-- Faq Section Start -->
+    <section id="faq" class="section" style="padding-top: 60px; padding-bottom: 80px; background-color: #fafafa; margin-top: 20px;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="wow fadeInUp" data-wow-delay=".3s">
+              <div class="faq-illustration">
+                <div class="house-illustration">
+                  <div class="house-icon">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                  </div>
+                </div>
+                <div class="insulation-benefits">
+                  <h3>Premium Insulation Solutions</h3>
+                  <p>Experience year-round comfort and significant savings with our advanced eco-friendly systems</p>
+                  <div class="benefit-icon-row">
+                    <div class="benefit-icon">
+                      <i class="fa-solid fa-temperature-arrow-down"></i>
+                    </div>
+                    <div class="benefit-icon">
+                      <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+                    <div class="benefit-icon">
+                      <i class="fa-solid fa-leaf"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="faq-content">
+              <div class="section-title">
+                <span class="wow fadeInUp"
+                  ><img src="assets/img/icon/07.svg" alt="img" />FREQUENTLY ASKED</span
+                >
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                  Common Questions About Insulation
+                </h2>
+              </div>
+              <p class="mt-3 mt-md-0 mb-4">
+                Here are answers to some of the most common questions our customers ask about home insulation solutions. If you don't find what you're looking for, please don't hesitate to contact us directly.
+              </p>
+              <div class="faq-accordion">
+                <div class="accordion" id="accordion">
+                  <div
+                    class="accordion-item mb-4 wow fadeInUp"
+                    data-wow-delay=".3s"
+                  >
+                    <h5 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq1"
+                        aria-expanded="true"
+                        aria-controls="faq1"
+                      >
+                        <span>01.</span> How much can I save on energy bills with proper insulation?
+                      </button>
+                    </h5>
+                    <div
+                      id="faq1"
+                      class="accordion-collapse show"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body">
+                        Most homeowners see a reduction of 30-45% on their heating and cooling costs after installing our eco-friendly insulation. The exact savings depend on your current insulation status, property size, and energy usage patterns.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="accordion-item mb-4 wow fadeInUp"
+                    data-wow-delay=".5s"
+                  >
+                    <h5 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq2"
+                        aria-expanded="false"
+                        aria-controls="faq2"
+                      >
+                        <span>02.</span> Are there government grants available for insulation?
+                      </button>
+                    </h5>
+                    <div
+                      id="faq2"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body">
+                        Yes, many UK homeowners qualify for government grants and incentives that can cover a significant portion of insulation costs. Our team will help you identify which programs you're eligible for and assist with the application process.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="accordion-item mb-4 wow fadeInUp"
+                    data-wow-delay=".7s"
+                  >
+                    <h5 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq3"
+                        aria-expanded="false"
+                        aria-controls="faq3"
+                      >
+                        <span>03.</span> How long does the insulation installation process take?
+                      </button>
+                    </h5>
+                    <div
+                      id="faq3"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body">
+                        Most residential insulation projects are completed within 1-3 days, depending on your property size and the specific insulation solutions needed. We work efficiently to minimize disruption to your daily routine.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="accordion-item wow fadeInUp"
+                    data-wow-delay=".8s"
+                  >
+                    <h5 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq4"
+                        aria-expanded="false"
+                        aria-controls="faq4"
+                      >
+                        <span>04.</span> What makes your insulation materials eco-friendly?
+                      </button>
+                    </h5>
+                    <div
+                      id="faq4"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body">
+                        Our insulation materials are made from recycled or renewable resources, contain no harmful chemicals, and are manufactured using energy-efficient processes. They not only improve your home's energy efficiency but also have a minimal environmental footprint.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counter Section Start -->
+    <section class="counter-section fix section-padding pt-0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div
+            class="col-xl col-lg-2 col-md-4 wow fadeInUp"
+            data-wow-delay=".2s"
+          >
+            <div class="counter-items">
+              <div class="icon">
+                <i class="fa-solid fa-clipboard-check" style="font-size: 36px; color: #43c3ea; animation: completion-pulse 2s ease-in-out infinite;"></i>
+              </div>
+              <div class="content">
+                <h2><span class="count">350</span>+</h2>
+                <h3>Completed Projects</h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl col-lg-2 col-md-4 wow fadeInUp"
+            data-wow-delay=".4s"
+          >
+            <div class="counter-items">
+              <div class="icon">
+                <i class="fa-solid fa-users-gear" style="font-size: 36px; color: #43c3ea;"></i>
+              </div>
+              <div class="content">
+                <h2><span class="count">500</span>+</h2>
+                <h3>Skilled Professionals</h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl col-lg-2 col-md-4 wow fadeInUp"
+            data-wow-delay=".6s"
+          >
+            <div class="counter-items">
+              <div class="icon">
+                <i class="fa-solid fa-toolbox" style="font-size: 36px; color: #43c3ea;"></i>
+              </div>
+              <div class="content">
+                <h2><span class="count">40</span>+</h2>
+                <h3>Expert Technicians</h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl col-lg-2 col-md-4 wow fadeInUp"
+            data-wow-delay=".8s"
+          >
+            <div class="counter-items">
+              <div class="icon">
+                <i class="fa-solid fa-earth-americas" style="font-size: 36px; color: #43c3ea;"></i>
+              </div>
+              <div class="content">
+                <h2><span class="count">4,500</span>+</h2>
+                <h3>Tons of CO2 Saved</h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl col-lg-2 col-md-4 wow fadeInUp"
+            data-wow-delay="1s"
+          >
+            <div class="counter-items">
+              <div class="icon">
+                <i class="fa-solid fa-house-heart" style="font-size: 36px; color: #43c3ea;"></i>
+              </div>
+              <div class="content">
+                <h2><span class="count">2,400</span>+</h2>
+                <h3>Happy Homeowners</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Start -->
+    <footer class="footer-section fix section-bg">
+      <div class="shape-1">
+        <img src="assets/img/footer/shape-1.png" alt="img" />
+      </div>
+      <div class="shape-2">
+        <img src="assets/img/footer/shape-2.png" alt="img" />
+      </div>
+      <div class="container">
+        <div class="footer-widgets-wrapper style-2">
+          <div class="row">
+            <div
+              class="col-xl-4 col-sm-6 col-md-6 col-lg-4 wow fadeInUp"
+              data-wow-delay=".2s"
+            >
+              <div class="single-footer-widget">
+                <div class="widget-head">
+                  <a href="index.php">
+                    <img src="assets/img/logo/white-logo.svg" alt="logo-img" />
+                  </a>
+                </div>
+                <div class="footer-content">
+                  <p>
+                    With a commitment to sustainability, excellence <br />
+                    and customer satisfaction, we deliver <br />
+                    quality you can trust.
+                  </p>
+                  <div class="social-icon d-flex align-items-center">
+                    <a href="https://wa.me/447538038430" target="_blank" class="whatsapp-btn d-flex align-items-center" title="Contact us on WhatsApp">
+                      <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                      </div>
+                      <span class="whatsapp-text">Chat with us on WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-xl-2 col-sm-6 col-md-6 col-lg-4 wow fadeInUp"
+              data-wow-delay=".4s"
+            >
+              <div class="single-footer-widget">
+                <div class="widget-head">
+                  <h3>Contact Us</h3>
+                </div>
+                <ul class="list-items">
+                  <li>
+                    <a href="mailto:primefindzltd@gmail.com">
+                      <i class="far fa-envelope"></i>
+                      primefindzltd@gmail.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+447538038430">
+                      <i class="far fa-phone"></i>
+                      +44 7538 038430
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fal fa-map-marker-alt"></i>
+                      London, United Kingdom
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-xl-3 ps-lg-4 col-sm-6 col-md-6 col-lg-4 wow fadeInUp"
+              data-wow-delay=".6s"
+            ></div>
+            <div
+              class="col-xl-3 col-sm-6 col-md-6 col-lg-4 wow fadeInUp"
+              data-wow-delay=".8s"
+            >
+            <div class="single-footer-widget">
+                <div class="widget-head">
+                  <h3>Quick Links</h3>
+                </div>
+                <ul class="list-items">
+                    <li>
+                        <a href="index.html">
+                          <i class="fa-regular fa-arrow-right-long"></i>
+                         Home
+                        </a>
+                      </li>
+                  <li>
+                    <a href="index.html#about">
+                      <i class="fa-regular fa-arrow-right-long"></i>
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html#service">
+                      <i class="fa-regular fa-arrow-right-long"></i>
+                      Benefits
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html#our-services-section">
+                      <i class="fa-regular fa-arrow-right-long"></i>
+                      Our Services
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-wrapper">
+              <p>
+                © Copyright 2025 by <a href="index.html">Prime Findz Ltd</a>. All rights
+                Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- all js files -->
+    <!--<< All JS Plugins >>-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Viewport Js >>-->
+    <script src="assets/js/viewport.jquery.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <!--<< Counterup Js >>-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- contact form Js -->
+    <script src="assets/js/contact.form.js"></script>
+    <!--<< Main.js >>-->
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+      // Mobile animation script
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the counter module
+        counterModule.init();
+        
+        // Check if it's a mobile device
+        const isMobile = window.innerWidth <= 767;
+        
+        if (isMobile) {
+          // Intersection Observer for benefit cards
+          const benefitCards = document.querySelectorAll('.benefit-card');
+          
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          benefitCards.forEach(card => {
+            observer.observe(card);
+          });
+          
+          // Intersection Observer for service cards on mobile
+          const serviceCards = document.querySelectorAll('.service-card');
+          
+          const serviceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          serviceCards.forEach(card => {
+            serviceObserver.observe(card);
+          });
+          
+          // Add touch feedback for all interactive elements
+          const touchElements = document.querySelectorAll('.theme-btn, .service-card-icon, .benefit-card, .footer-content a, .list-items a');
+          
+          touchElements.forEach(element => {
+            element.addEventListener('touchstart', function() {
+              this.style.transform = 'scale(0.95)';
+            });
+            
+            element.addEventListener('touchend', function() {
+              this.style.transform = 'scale(1)';
+            });
+          });
+          
+          // Scroll progress indicator
+          function updateScrollProgress() {
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPosition = window.scrollY;
+            const scrollPercentage = (scrollPosition / windowHeight) * 100;
+            document.querySelector('.scroll-progress').style.width = scrollPercentage + '%';
+          }
+          
+          // Update scroll progress on scroll
+          window.addEventListener('scroll', updateScrollProgress);
+          updateScrollProgress();
+        }
+      });
+    </script>
+    <script>
+      // Enhanced FAQ and Counter Section Animations
+      document.addEventListener('DOMContentLoaded', function() {
+        // Enhanced animation for FAQ accordion items
+        const faqItems = document.querySelectorAll('.accordion-item');
+        
+        const faqObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+              }, index * 150);
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        faqItems.forEach(item => {
+          item.style.opacity = '0';
+          item.style.transform = 'translateX(-20px)';
+          item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          faqObserver.observe(item);
+        });
+        
+        // Enhanced animation for counter items
+        const counterItems = document.querySelectorAll('.counter-items');
+        
+        const counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                
+                // Add a pulse effect to the icon when it appears
+                const icon = entry.target.querySelector('.icon i');
+                if (icon) {
+                  icon.style.animation = 'pulse-count 1.5s 2';
+                }
+              }, index * 150);
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        counterItems.forEach(item => {
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(20px)';
+          item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          counterObserver.observe(item);
+        });
+        
+        // Add interactive effect to house icon in FAQ
+        const houseIcon = document.querySelector('.house-icon i');
+        if (houseIcon) {
+          houseIcon.addEventListener('mouseover', function() {
+            this.style.animation = 'pulse-count 0.5s infinite';
+          });
+          
+          houseIcon.addEventListener('mouseout', function() {
+            this.style.animation = 'float-icon 3s ease-in-out infinite';
+          });
+        }
+        
+        // Add scroll animation to elements
+        function handleScrollAnimation() {
+          $('.animate-on-scroll').each(function() {
+            var elementPosition = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            
+            if (elementPosition < topOfWindow + windowHeight - 100) {
+              $(this).addClass('visible');
+            }
+          });
+        }
+        
+        // Add animation classes to sections
+        $('.section-title, .about-content, .benefit-card, .work-process-items, .faq-content, .counter-items').addClass('animate-on-scroll slide-up');
+        $('.about-image, .house-illustration').addClass('animate-on-scroll scale-in');
+        $('.hero-content, .about-list li').addClass('animate-on-scroll slide-right');
+        
+        // Execute on page load and scroll
+        handleScrollAnimation();
+        $(window).on('scroll', handleScrollAnimation);
+      });
+    </script>
+    <!--<< Swiper Js >>-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--<< Waypoint Js >>-->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!--<< Nice-select Js >>-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Stellar Js >>-->
+    <script src="assets/js/jquery.stellar.min.js"></script>
+    <!--<< Theia Sticky Sidebar Js >>-->
+    <script src="assets/js/theia-sticky-sidebar.js"></script>
+    <!--<< Main Js >>-->
+    <script src="assets/js/main.js"></script>
+    
+    
+    <script>
+      // Enhanced Offcanvas Animation
+      $(document).ready(function() {
+        // Add fade-in animations to offcanvas elements
+        $('.offcanvas__close button').addClass('pulse-effect');
+        
+        // Enhance open/close animations
+        $('.offcanvas__open').on('click', function() {
+          setTimeout(function() {
+            $('.sidebar-intro').css({
+              'opacity': '0',
+              'transform': 'translateY(20px)'
+            }).animate({
+              'opacity': '1',
+              'transform': 'translateY(0)'
+            }, 500);
+            
+            // Staggered animation for contact items
+            $('.contact-item').each(function(index) {
+              var $this = $(this);
+              setTimeout(function() {
+                $this.css({
+                  'opacity': '0',
+                  'transform': 'translateX(-20px)'
+                }).animate({
+                  'opacity': '1',
+                  'transform': 'translateX(0)'
+                }, 400);
+              }, 300 + (index * 150));
+            });
+            
+            // Animate CTA and social icons
+            setTimeout(function() {
+              $('.cta-container, .social-media-container').css({
+                'opacity': '0',
+                'transform': 'translateY(20px)'
+              }).animate({
+                'opacity': '1',
+                'transform': 'translateY(0)'
+              }, 500);
+            }, 800);
+          }, 300);
+        });
+        
+        // Enhance close animation
+        $('.offcanvas__close button').on('click', function() {
+          $('.sidebar-intro, .contact-item, .cta-container, .social-media-container').animate({
+            'opacity': '0',
+            'transform': 'translateY(20px)'
+          }, 300);
+        });
+        
+        // Enhance hover effects on contact items
+        $('.contact-item').hover(
+          function() {
+            $(this).find('.contact-icon-wrapper').css('transform', 'scale(1.1) rotate(10deg)');
+          },
+          function() {
+            $(this).find('.contact-icon-wrapper').css('transform', 'scale(1) rotate(0deg)');
+          }
+        );
+        
+        // Add scroll animation to elements
+        function handleScrollAnimation() {
+          $('.animate-on-scroll').each(function() {
+            var elementPosition = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            
+            if (elementPosition < topOfWindow + windowHeight - 100) {
+              $(this).addClass('visible');
+            }
+          });
+        }
+        
+        // Add animation classes to sections
+        $('.section-title, .about-content, .benefit-card, .work-process-items, .faq-content, .counter-items').addClass('animate-on-scroll slide-up');
+        $('.about-image, .house-illustration').addClass('animate-on-scroll scale-in');
+        $('.hero-content, .about-list li').addClass('animate-on-scroll slide-right');
+        
+        // Execute on page load and scroll
+        handleScrollAnimation();
+        $(window).on('scroll', handleScrollAnimation);
+        
+        // Removed mobile breadcrumb navigation update code
+      });
+    </script>
+    
+    <script>
+      // Mobile animation script
+      document.addEventListener('DOMContentLoaded', function() {
+        // Check if it's a mobile device
+        const isMobile = window.innerWidth <= 767;
+        
+        if (isMobile) {
+          // Intersection Observer for benefit cards
+          const benefitCards = document.querySelectorAll('.benefit-card');
+          
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          benefitCards.forEach(card => {
+            observer.observe(card);
+          });
+          
+          // Intersection Observer for service cards on mobile
+          const serviceCards = document.querySelectorAll('.service-card');
+          
+          const serviceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          serviceCards.forEach(card => {
+            serviceObserver.observe(card);
+          });
+          
+          // Add touch feedback for all interactive elements
+          const touchElements = document.querySelectorAll('.theme-btn, .service-card-icon, .benefit-card, .footer-content a, .list-items a');
+          
+          touchElements.forEach(element => {
+            element.addEventListener('touchstart', function() {
+              this.style.transform = 'scale(0.95)';
+            });
+            
+            element.addEventListener('touchend', function() {
+              this.style.transform = 'scale(1)';
+            });
+          });
+          
+          // Scroll progress indicator
+          function updateScrollProgress() {
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPosition = window.scrollY;
+            const scrollPercentage = (scrollPosition / windowHeight) * 100;
+            document.querySelector('.scroll-progress').style.width = scrollPercentage + '%';
+          }
+          
+          // Update scroll progress on scroll
+          window.addEventListener('scroll', updateScrollProgress);
+          updateScrollProgress();
+        }
+      });
+    </script>
+  </body>
+  <script>
+    // Clean modular JavaScript implementation
+    document.addEventListener('DOMContentLoaded', function() {
+      // ======================================
+      // MODULE: Counter Animation
+      // ======================================
+      const counterModule = {
+        init: function() {
+          this.counterElements = document.querySelectorAll('.count');
+          
+          // Reset all counters to 0 initially
+          this.counterElements.forEach(counter => {
+            // Store the original target value as a data attribute
+            const originalValue = counter.textContent.trim();
+            counter.setAttribute('data-target', originalValue);
+            // Start with 0 displayed
+            counter.textContent = '0';
+            
+            // Create particles immediately around the 0
+            const counterItem = counter.closest('.counter-items');
+            if (counterItem) {
+              // Create particle container if it doesn't exist
+              let particleContainer = counterItem.querySelector('.number-particles');
+              if (!particleContainer) {
+                particleContainer = document.createElement('div');
+                particleContainer.className = 'number-particles';
+                particleContainer.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none;';
+                counterItem.appendChild(particleContainer);
+              }
+              
+              // Add some initial particles around the 0
+              for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                  this.createInitialParticle(counterItem);
+                }, i * 150);
+              }
+            }
+          });
+          
+          this.setupObserver();
+          this.addVisualEnhancements();
+          
+          // Trigger animations for visible counters on page load
+          setTimeout(() => {
+            this.counterElements.forEach(counter => {
+              const rect = counter.getBoundingClientRect();
+              if (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+              ) {
+                // Counter is visible on page load, trigger animation
+                const originalValue = counter.getAttribute('data-target');
+                this.animateCounter(counter, originalValue);
+              }
+            });
+          }, 500);
+        },
+        
+        // Create initial particles around the 0
+        createInitialParticle: function(counterItem) {
+          // Get the particle container
+          const particleContainer = counterItem.querySelector('.number-particles');
+          if (!particleContainer) return;
+          
+          // Create a particle
+          const particle = document.createElement('div');
+          
+          // Apply random animation selection
+          const animations = ['float-up', 'float-up-right', 'float-up-left'];
+          const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+          
+          // Random animation duration between 1 and 1.5 seconds
+          const animationDuration = 1 + Math.random() * 0.5;
+          
+          // Calculate random position for the particle
+          const xPos = 40 + Math.random() * 30; // More centered horizontally
+          const yPos = 30 + Math.random() * 30; // More centered vertically
+          
+          // Apply styles to the particle
+          particle.style.cssText = `
+            position: absolute;
+            font-size: ${10 + Math.random() * 6}px;
+            font-weight: bold;
+            color: hsl(195, ${80 + Math.random() * 20}%, ${60 + Math.random() * 10}%);
+            top: ${yPos}%;
+            left: ${xPos}%;
+            opacity: ${0.7 + Math.random() * 0.3};
+            animation: ${randomAnimation} ${animationDuration}s forwards;
+            text-shadow: 0 0 ${2 + Math.random() * 3}px rgba(67, 195, 234, 0.6);
+            z-index: 10;
+          `;
+          
+          // Set the content to be a random +0 to +9
+          particle.textContent = '+' + Math.floor(Math.random() * 10);
+          
+          // Add the particle to the container
+          particleContainer.appendChild(particle);
+          
+          // Remove the particle after animation completes
+          setTimeout(() => {
+            if (particleContainer.contains(particle)) {
+              particleContainer.removeChild(particle);
+            }
+          }, animationDuration * 1000);
+        },
+        
+        setupObserver: function() {
+          const self = this;
+          this.counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // Make sure we're animating from 0 to the target
+                const target = entry.target;
+                const originalValue = target.getAttribute('data-target');
+                
+                // Only start animation if we're still at 0
+                if (target.textContent === '0') {
+                  // Add a slight delay before starting the animation for a staggered effect
+                  setTimeout(() => {
+                    self.animateCounter(target, originalValue);
+                    
+                    // Add visual cue for animation start
+                    const counterItem = entry.target.closest('.counter-items');
+                    if (counterItem) {
+                      counterItem.classList.add('counting-active');
+                    }
+                  }, Math.random() * 300); // Random delay between 0-300ms for staggered effect
+                }
+                
+                // Don't unobserve so animation plays every time the counter comes into view
+                // this.counterObserver.unobserve(entry.target);
+              } else {
+                // When counter exits viewport, reset to 0 for next time
+                const target = entry.target;
+                // Only reset if it's not currently animating
+                if (!target.countInterval) {
+                  target.textContent = '0';
+                  // Add some particles around the 0
+                  const counterItem = target.closest('.counter-items');
+                  if (counterItem) {
+                    for (let i = 0; i < 2; i++) {
+                      setTimeout(() => {
+                        self.createInitialParticle(counterItem);
+                      }, i * 300);
+                    }
+                  }
+                }
+              }
+            });
+          }, { threshold: 0.3, rootMargin: '0px 0px -10% 0px' }); // Trigger earlier when scrolling
+          
+          this.counterElements.forEach(counter => {
+            this.counterObserver.observe(counter);
+          });
+        },
+        
+        animateCounter: function(target, originalValue) {
+          const startValue = 0;
+          const targetValue = parseInt(originalValue);
+          const duration = 2500; // Longer duration for more dramatic effect
+          const stepTime = 16; // For smooth 60fps animation
+          let startTime = null;
+          let lastCount = 0;
+          
+          // Format numbers with commas
+          const formatNumber = (num) => {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          };
+          
+          // Stop any existing animation
+          if (target.countInterval) cancelAnimationFrame(target.countInterval);
+          
+          // Save original styling to restore after animation
+          const originalHTML = target.parentElement.innerHTML;
+          const counterParent = target.parentElement;
+          
+          // Add a particle container for the number animation
+          const counterItem = counterParent.closest('.counter-items');
+          if (counterItem) {
+            // Add a short intro animation to draw attention
+            counterItem.style.animation = 'counter-intro 0.5s forwards';
+            
+            // Create particle container if it doesn't exist
+            let particleContainer = counterItem.querySelector('.number-particles');
+            if (!particleContainer) {
+              particleContainer = document.createElement('div');
+              particleContainer.className = 'number-particles';
+              particleContainer.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none;';
+              counterItem.appendChild(particleContainer);
+            }
+            
+            // Add a pulse effect to the icon
+            const icon = counterItem.querySelector('.icon i');
+            if (icon) {
+              icon.style.animation = 'icon-intro 0.7s forwards';
+            }
+          }
+          
+          // Temporarily remove gradient styling during animation to make numbers visible
+          counterParent.style.background = 'none';
+          target.style.webkitBackgroundClip = 'unset';
+          target.style.webkitTextFillColor = '#43c3ea';
+          target.style.fontWeight = '700';
+          
+          // Show 0 first for a moment before starting the count (for dramatic effect)
+          target.textContent = '0';
+          
+          // Wait a short moment before starting the actual counting
+          setTimeout(() => {
+            startTime = null; // Reset start time for the main animation
+            target.countInterval = requestAnimationFrame(step);
+          }, 300);
+          
+          // Function to create number particles when the count changes
+          const createNumberParticle = (newCount) => {
+            if (!counterItem) return;
+            
+            // Get the particle container
+            const particleContainer = counterItem.querySelector('.number-particles');
+            if (!particleContainer) return;
+            
+            // Create a particle with the count number
+            const particle = document.createElement('div');
+            
+            // Apply random animation selection
+            const animations = ['float-up', 'float-up-right', 'float-up-left'];
+            const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+            
+            // Random animation duration between 1 and 1.5 seconds
+            const animationDuration = 1 + Math.random() * 0.5;
+            
+            // Calculate random position for the particle
+            const xPos = 40 + Math.random() * 60; // Between 40% and 100% of width
+            const yPos = 20 + Math.random() * 60; // Between 20% and 80% of height
+            
+            // Apply HSL color with random hue shift for variety
+            const hueShift = Math.floor(Math.random() * 20) - 10; // +/- 10 degrees
+            
+            // Apply styles to the particle
+            particle.style.cssText = `
+              position: absolute;
+              font-size: ${10 + Math.random() * 6}px;
+              font-weight: bold;
+              color: hsl(195, ${80 + Math.random() * 20}%, ${60 + Math.random() * 10}%);
+              top: ${yPos}%;
+              left: ${xPos}%;
+              opacity: ${0.7 + Math.random() * 0.3};
+              animation: ${randomAnimation} ${animationDuration}s forwards;
+              text-shadow: 0 0 ${2 + Math.random() * 3}px rgba(67, 195, 234, 0.6);
+              z-index: 10;
+            `;
+            
+            // Set the content to be the count number with a + sign
+            particle.textContent = '+' + Math.ceil(Math.random() * 5);
+            
+            // Add the particle to the container
+            particleContainer.appendChild(particle);
+            
+            // Remove the particle after animation completes
+            setTimeout(() => {
+              if (particleContainer.contains(particle)) {
+                particleContainer.removeChild(particle);
+              }
+            }, animationDuration * 1000);
+          };
+          
+          // Modify the counter animation function
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            
+            // Total duration based on count value - make it longer to be more visible
+            const duration = targetValue > 100 ? 4000 : (targetValue > 50 ? 3500 : 3000);
+            
+            // Calculate progress with easing 
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Use easeOutQuad for a nicer animation with a slower start
+            const easeOutQuad = progress < 0.5 ? 
+                               2 * progress * progress : 
+                               1 - Math.pow(-2 * progress + 2, 2) / 2;
+            
+            if (progress < 1) {
+              // During animation, add slight randomness but ensure steady progress
+              const percentComplete = progress * 100;
+              
+              // If we're at certain percentage milestones, ensure we hit those numbers exactly
+              let currentCount;
+              
+              // In the first half, count more slowly
+              if (progress < 0.5) {
+                currentCount = Math.floor(easeOutQuad * targetValue * 0.7);
+              } else {
+                // In the second half, approach the target more gradually
+                currentCount = Math.floor((0.7 * targetValue) + (easeOutQuad - 0.5) * 2 * (0.3 * targetValue));
+              }
+              
+              // Ensure we don't exceed the target
+              currentCount = Math.min(currentCount, targetValue);
+              
+              // Only update if the count has changed
+              if (currentCount !== lastCount) {
+                target.textContent = currentCount;
+                lastCount = currentCount;
+                
+                // Create particles more consistently (more frequent at lower counts)
+                if (currentCount % Math.max(1, Math.floor(targetValue / 15)) === 0 || Math.random() < 0.2) {
+                  createNumberParticle(currentCount);
+                }
+                
+                // Apply dynamic color during counting
+                const progress = currentCount / targetValue;
+                const hue = 195 + Math.sin(progress * Math.PI) * 10;
+                target.style.color = `hsl(${hue}, 85%, 65%)`;
+                
+                // Add a subtle scale effect on count change
+                target.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                  target.style.transform = 'scale(1)';
+                }, 50);
+              }
+              
+              target.countInterval = requestAnimationFrame(step);
+            } else {
+              // Ensure we end with the exact value
+              target.textContent = targetValue;
+              
+              // Create a final burst of particles
+              for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                  createNumberParticle(targetValue);
+                }, i * 100);
+              }
+              
+              // Add a final "completion" animation
+              target.style.transform = 'scale(1.1)';
+              setTimeout(() => {
+                target.style.transform = 'scale(1)';
+              }, 200);
+              
+              // Restore original styling
+              setTimeout(() => {
+                target.style.background = '';
+                target.style.webkitBackgroundClip = '';
+                target.style.webkitTextFillColor = '';
+                target.style.fontWeight = '';
+                counterParent.style.background = '';
+              }, 500);
+              
+              // Cancel animation
+              cancelAnimationFrame(target.countInterval);
+            }
+          }
+          
+          // Start the animation
+          target.countInterval = requestAnimationFrame(step);
+        },
+        
+        addVisualEnhancements: function() {
+          // Add CSS styles for counter animations
+          const style = document.createElement('style');
+          style.textContent = `
+            /* Counter item styles */
+            .counter-items {
+              transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+              position: relative;
+              overflow: hidden;
+            }
+            
+            .counter-items:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 3px;
+              height: 100%;
+              background: #43c3ea;
+              transition: all 0.6s ease;
+            }
+            
+            .counter-items:hover:before {
+              width: 100%;
+              opacity: 0.05;
+            }
+            
+            .counter-items.counting-active .content h2 {
+              animation: pulse-count 0.5s infinite;
+            }
+            
+            .counter-items .content h2 {
+              transition: transform 0.2s ease;
+            }
+            
+            /* Animation for counter intro effect */
+            @keyframes counter-intro {
+              0% {
+                transform: scale(1);
+                box-shadow: 0 5px 20px rgba(67, 195, 234, 0);
+              }
+              50% {
+                transform: scale(1.05);
+                box-shadow: 0 10px 25px rgba(67, 195, 234, 0.2);
+              }
+              100% {
+                transform: scale(1);
+                box-shadow: 0 7px 15px rgba(67, 195, 234, 0.1);
+              }
+            }
+            
+            /* Animation for counter icon intro effect */
+            @keyframes icon-intro {
+              0% {
+                transform: scale(1) rotate(0deg);
+                opacity: 0.7;
+                color: #43c3ea;
+              }
+              50% {
+                transform: scale(1.2) rotate(10deg);
+                opacity: 1;
+                color: #2684ff;
+              }
+              100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 0.9;
+                color: #43c3ea;
+              }
+            }
+            
+            /* Improved Particle Animations */
+            @keyframes float-up {
+              0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+              }
+              20% {
+                transform: translateY(-10px) rotate(5deg);
+                opacity: 0.9;
+              }
+              50% {
+                transform: translateY(-20px) rotate(-5deg);
+                opacity: 0.7;
+              }
+              80% {
+                transform: translateY(-30px) rotate(5deg);
+                opacity: 0.4;
+              }
+              100% {
+                transform: translateY(-40px) rotate(0deg);
+                opacity: 0;
+              }
+            }
+            
+            @keyframes float-up-right {
+              0% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 1;
+              }
+              25% {
+                transform: translate(10px, -10px) rotate(5deg);
+                opacity: 0.8;
+              }
+              50% {
+                transform: translate(15px, -20px) rotate(10deg);
+                opacity: 0.6;
+              }
+              75% {
+                transform: translate(20px, -30px) rotate(5deg);
+                opacity: 0.3;
+              }
+              100% {
+                transform: translate(25px, -40px) rotate(0deg);
+                opacity: 0;
+              }
+            }
+            
+            @keyframes float-up-left {
+              0% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 1;
+              }
+              25% {
+                transform: translate(-10px, -10px) rotate(-5deg);
+                opacity: 0.8;
+              }
+              50% {
+                transform: translate(-15px, -20px) rotate(-10deg);
+                opacity: 0.6;
+              }
+              75% {
+                transform: translate(-20px, -30px) rotate(-5deg);
+                opacity: 0.3;
+              }
+              100% {
+                transform: translate(-25px, -40px) rotate(0deg);
+                opacity: 0;
+              }
+            }
+          `;
+          document.head.appendChild(style);
+        }
+      };
+      
+      // ======================================
+      // MODULE: Navigation & Smooth Scrolling
+      // ======================================
+      const navigationModule = {
+        init: function() {
+          this.scrollLinks = document.querySelectorAll('[data-scroll-to]');
+          this.offcanvasOverlay = document.querySelector('.offcanvas__overlay');
+          this.closeBtn = document.querySelector('.offcanvas__close button');
+          this.headerHeight = document.querySelector('.header-section-2').offsetHeight;
+          
+          this.bindEvents();
+        },
+        
+        bindEvents: function() {
+          const self = this;
+          
+          // Setup scroll links
+          this.scrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('data-scroll-to');
+              
+              if (targetId === 'hero-section') {
+                self.scrollToTop();
+              } else {
+                self.scrollToElement(targetId);
+              }
+              
+              // Close mobile menu if open
+              self.closeOffcanvasIfOpen();
+            });
+          });
+        },
+        
+        scrollToElement: function(targetId) {
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            // Calculate the target position with offset
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - this.headerHeight;
+            
+            // Smooth scroll to target
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        },
+        
+        scrollToTop: function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        },
+        
+        closeOffcanvasIfOpen: function() {
+          if (this.offcanvasOverlay && this.offcanvasOverlay.classList.contains('active')) {
+            if (this.closeBtn) this.closeBtn.click();
+          }
+        }
+      };
+      
+      // ======================================
+      // MODULE: Mobile Enhancements
+      // ======================================
+      const mobileModule = {
+        init: function() {
+          this.isMobile = window.innerWidth <= 767;
+          
+          if (this.isMobile) {
+            this.setupTouchFeedback();
+            this.setupScrollProgress();
+            this.observeBenefitCards();
+          }
+        },
+        
+        setupTouchFeedback: function() {
+          const touchElements = document.querySelectorAll('.theme-btn, .service-card-icon, .benefit-card, .footer-content a, .list-items a, .nav-buttons a');
+          
+          touchElements.forEach(element => {
+            element.addEventListener('touchstart', function() {
+              this.style.transform = 'scale(0.95)';
+            });
+            
+            element.addEventListener('touchend', function() {
+              this.style.transform = 'scale(1)';
+            });
+          });
+        },
+        
+        setupScrollProgress: function() {
+          const progressBar = document.querySelector('.scroll-progress');
+          
+          if (progressBar) {
+            window.addEventListener('scroll', function() {
+              const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+              const scrollPosition = window.scrollY;
+              const scrollPercentage = (scrollPosition / windowHeight) * 100;
+              progressBar.style.width = scrollPercentage + '%';
+            });
+          }
+        },
+        
+        observeBenefitCards: function() {
+          const benefitCards = document.querySelectorAll('.benefit-card');
+          
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          benefitCards.forEach(card => {
+            observer.observe(card);
+          });
+        }
+      };
+      
+      // Initialize all modules
+      counterModule.init();
+      navigationModule.init();
+      mobileModule.init();
+    });
+  </script>
+  <script>
+    // Initialize AOS animation library
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  </script>
+  <!-- AOS Animation JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    // Initialize AOS animation library
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  </script>
+</body>
+</html>
+
+
